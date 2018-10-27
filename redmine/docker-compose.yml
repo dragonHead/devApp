@@ -1,0 +1,31 @@
+version: '3'
+services:
+  redmine:
+    image: redmine:latest
+    ports:
+      - 3000:3000
+    environment:
+      REDMINE_DB_MYSQL: redmine_db
+      REDMINE_DB_DATABASE: redmine
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_PASSWORD: redmine
+    depends_on:
+      - redmine_db
+    volumes:
+      - ./data/redmine/files:/usr/src/redmine/files
+      - ./data/redmine/plugins:/usr/src/redmine/plugins
+      - ./data/redmine/vendor/plugins:/usr/src/redmine/vendor/plugins
+      - ./data/redmine/public/themes:/usr/src/redmine/public/themes
+    restart: always
+  redmine_db:
+    image: mariadb:latest
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: redmine
+      MYSQL_USER: redmine
+      MYSQL_PASSWORD: redmine
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    restart: always

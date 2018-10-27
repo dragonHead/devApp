@@ -1,0 +1,14 @@
+#https://docs.gitlab.com/omnibus/docker/#install-gitlab-using-docker-compose
+version: '3.7'
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: 'localhost'
+    ports:
+     - '9090:80'
+     - '22:22'
+    volumes:
+      - './data/config:/etc/gitlab'
+      - './data/logs:/var/log/gitlab'
+      - './data/data:/var/opt/gitlab'
