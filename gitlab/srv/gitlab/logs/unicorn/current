@@ -1,0 +1,6 @@
+2018-11-10_04:36:28.73201 master failed to start, check stderr log for details
+2018-11-10_04:36:29.75187 failed to start a new unicorn master
+2018-11-10_04:36:29.77828 starting new unicorn master
+2018-11-10_04:37:21.15114 master failed to start, check stderr log for details
+2018-11-10_04:37:22.20165 failed to start a new unicorn master
+2018-11-10_04:37:22.26096 starting new unicorn master

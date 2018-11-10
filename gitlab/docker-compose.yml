@@ -6,9 +6,9 @@ services:
     restart: always
     hostname: 'localhost'
     ports:
-     - '9090:80'
-     - '22:22'
+     - '8087:80'
+     - '1022:22'
     volumes:
-      - './data/config:/etc/gitlab'
-      - './data/logs:/var/log/gitlab'
-      - './data/data:/var/opt/gitlab'
+      - './srv/gitlab/config:/etc/gitlab'
+      - './srv/gitlab/logs:/var/log/gitlab'
+      - './srv/gitlab/data:/var/opt/gitlab'

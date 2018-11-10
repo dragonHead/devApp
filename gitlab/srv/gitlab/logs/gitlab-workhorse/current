@@ -1,0 +1,2 @@
+2018-11-10_04:37:01.89040 time="2018-11-10T04:37:01Z" level=error msg=error correlation-id=fHz89fMFWt9 error="badgateway: failed after 0s: dial unix /var/opt/gitlab/gitlab-rails/sockets/gitlab.socket: connect: no such file or directory" method=GET uri=/help
+2018-11-10_04:37:01.89738 localhost @ - - [2018/11/10:04:37:01 +0000] "GET /help HTTP/1.1" 502 2940 "" "curl/7.59.0" 0.016

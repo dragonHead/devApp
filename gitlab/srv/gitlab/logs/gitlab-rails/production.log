@@ -1,0 +1,15 @@
+Started GET "/" for  at 2018-11-10 04:35:09 +0000
+Processing by RootController#index as HTML
+Redirected to http://example.org/users/sign_in
+Filter chain halted as :redirect_unlogged_user rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 0.0ms)
+Started GET "/" for  at 2018-11-10 04:36:25 +0000
+Processing by RootController#index as HTML
+Redirected to http://example.org/users/sign_in
+Filter chain halted as :redirect_unlogged_user rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+Started GET "/" for  at 2018-11-10 04:37:17 +0000
+Processing by RootController#index as HTML
+Redirected to http://example.org/users/sign_in
+Filter chain halted as :redirect_unlogged_user rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)

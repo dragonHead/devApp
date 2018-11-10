@@ -1,0 +1,4 @@
+# Logfile created on 2018-11-10 04:33:17 +0000 by logger.rb/56815
+{"method":"GET","path":"/","format":"html","controller":"RootController","action":"index","status":302,"duration":24.97,"view":0.0,"db":0.0,"location":"http://example.org/users/sign_in","time":"2018-11-10T04:35:17.103Z","params":[],"remote_ip":null,"user_id":null,"username":null,"ua":null}
+{"method":"GET","path":"/","format":"html","controller":"RootController","action":"index","status":302,"duration":38.12,"view":0.0,"db":0.0,"location":"http://example.org/users/sign_in","time":"2018-11-10T04:36:28.536Z","params":[],"remote_ip":null,"user_id":null,"username":null,"ua":null}
+{"method":"GET","path":"/","format":"html","controller":"RootController","action":"index","status":302,"duration":16.78,"view":0.0,"db":0.0,"location":"http://example.org/users/sign_in","time":"2018-11-10T04:37:20.994Z","params":[],"remote_ip":null,"user_id":null,"username":null,"ua":null}
