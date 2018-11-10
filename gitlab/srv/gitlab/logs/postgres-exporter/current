@@ -1,2 +1,0 @@
-2018-11-10_04:36:11.86496 time="2018-11-10T04:36:10Z" level=info msg="Semantic Version Changed: 0.0.0 -> 9.6.8" source="postgres_exporter.go:925"
-2018-11-10_04:36:15.33275 time="2018-11-10T04:36:15Z" level=info msg="Starting Server: localhost:9187" source="postgres_exporter.go:1137"

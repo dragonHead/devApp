@@ -1,5 +1,0 @@
-2018-11-10_04:37:23.04996 728:M 10 Nov 04:37:23.049 * 10 changes in 300 seconds. Saving...
-2018-11-10_04:37:23.05122 728:M 10 Nov 04:37:23.049 * Background saving started by pid 1864
-2018-11-10_04:37:23.08198 1864:C 10 Nov 04:37:23.076 * DB saved on disk
-2018-11-10_04:37:23.08244 1864:C 10 Nov 04:37:23.077 * RDB: 0 MB of memory used by copy-on-write
-2018-11-10_04:37:23.15152 728:M 10 Nov 04:37:23.150 * Background saving terminated with success
