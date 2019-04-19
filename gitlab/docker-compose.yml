@@ -1,19 +1,19 @@
 #https://docs.gitlab.com/omnibus/docker/#install-gitlab-using-docker-compose
-version: '3.7'
+version: "3.7"
 services:
   gitlab:
-    image: 'gitlab/gitlab-ce:latest'
+    image: "gitlab/gitlab-ce:latest"
     restart: always
-    hostname: 'gitlab'
+    hostname: "gitlab"
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://gitlab.local'
         unicorn['socket'] = '/opt/gitlab/var/unicorn/gitlab.socket'
         gitlab_rails['gitlab_shell_ssh_port'] = 1022
     ports:
-     - '9090:80'
-     - '1022:22'
+      - "9090:80"
+      - "1022:22"
     volumes:
-      - './srv/config:/etc/gitlab'
-      - './srv/logs:/var/log/gitlab'
-      - './srv/data:/var/opt/gitlab'
+      - "./srv/config:/etc/gitlab"
+      - "./srv/logs:/var/log/gitlab"
+      - "./srv/data:/var/opt/gitlab"
