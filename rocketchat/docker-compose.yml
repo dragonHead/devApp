@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   rocketchat:
-    image: rocketchat/rocket.chat:latest
+    image: rocketchat/rocket.chat:1.0.2
     environment:
       - MONGO_URL=mongodb://db:27017/rocketchat
       - ROOT_URL=http://localhost:3001

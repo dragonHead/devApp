@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   redmine:
-    image: redmine:latest
+    image: redmine:4.0.3
     ports:
       - 3000:3000
     environment:
