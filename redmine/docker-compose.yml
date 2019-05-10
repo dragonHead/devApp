@@ -18,7 +18,7 @@ services:
       - ./data/redmine/public/themes:/usr/src/redmine/public/themes
     restart: always
   redmine_db:
-    image: mariadb:latest
+    image: mariadb:10.3.14
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: "yes"
       MYSQL_ROOT_PASSWORD: mysql
