@@ -1,0 +1,22 @@
+#docker-compose exec db /bin/bash
+version: "3.1"
+services:
+  mysql_dev:
+    container_name: ${DB_MYSQL:-mysql}
+    image: mysql:${MYSQL_VERSION}
+    restart: always
+    hostname: my-mysql
+    environment:
+      TZ: ${TZ}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      BIND-ADDRESS: ${MYSQL_ADDRESS}
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    env_file:
+      - .env
+    ports:
+      - 13306:3306
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./sqls:/docker-entrypoint-initdb.d
+    tty: true
