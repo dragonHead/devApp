@@ -1,0 +1,23 @@
+#docker-compose exec db /bin/bash
+version: "3.7"
+services:
+  postgre_dev:
+    container_name: ${CONTAINER_NAME}
+    build: .
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      LANG: ja_JP.UTF-8
+    env_file:
+      - .env
+    ports:
+      - 15432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+#      - ./sqls:/docker-entrypoint-initdb.d
+#      - ./conf/postgresql.conf:/etc/postgresql.conf
+volumes:
+  postgre_dev:
+    driver: local
