@@ -1,5 +1,5 @@
 #docker-compose exec postgre_dev /bin/bash
-version: "3.7"
+version: "3"
 services:
   postgre_dev:
     container_name: ${CONTAINER_NAME}

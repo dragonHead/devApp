@@ -1,5 +1,5 @@
 #docker-compose exec db /bin/bash
-version: "3.1"
+version: "3"
 services:
   mysql_dev:
     container_name: ${DB_MYSQL:-mysql}
