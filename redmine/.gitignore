@@ -1,0 +1,6 @@
+redmine/files/
+redmine/log/
+redmine/plugins/
+redmine/public/
+
+postgres/data/
