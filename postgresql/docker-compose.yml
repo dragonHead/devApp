@@ -3,13 +3,15 @@ version: "3"
 services:
   postgre_dev:
     container_name: ${CONTAINER_NAME}
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
-      LANG: ja_JP.UTF-8
+      LANG: ${LANG}
     env_file:
       - .env
     ports:
