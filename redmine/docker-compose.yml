@@ -4,11 +4,11 @@ services:
     container_name: ${REDMINE_CONTAINER_NAME}
     build:
       context: .
-      dockerfile: ./redmine/Dockerfile
+      dockerfile: ./redmine/docker/Dockerfile
     ports:
       - "33000:3000"
     volumes:
-      - ./redmine/configuration.yml:/usr/src/redmine/config/configuration.yml
+      - ./redmine/docker/configuration.yml:/usr/src/redmine/config/configuration.yml
       - ./redmine/files:/usr/src/redmine/files
       - ./redmine/log:/usr/src/redmine/log
       - ./redmine/plugins:/usr/src/redmine/plugins
@@ -28,7 +28,7 @@ services:
     container_name: ${POSTGRES_CONTAINER_NAME}
     build:
       context: .
-      dockerfile: ./postgres/Dockerfile
+      dockerfile: ./postgres/docker/Dockerfile
     volumes:
       - ./postgres/data:/var/lib/postgresql/data
       # - ./postgres/sqls:/docker-entrypoint-initdb.d
@@ -48,7 +48,7 @@ services:
     container_name: ${MAIL_CONTAINER_NAME}
     build:
       context: .
-      dockerfile: ./mail/Dockerfile
+      dockerfile: ./mail/docker/Dockerfile
     ports:
       - "8025:8025"
       - "11025:1025"
