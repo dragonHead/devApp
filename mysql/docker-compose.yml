@@ -1,18 +1,18 @@
-#docker-compose exec db /bin/bash
 version: "3"
 services:
   mysql_dev:
-    container_name: ${DB_MYSQL:-mysql}
-    image: mysql:${MYSQL_VERSION}
+    container_name: ${CONTAINER_NAME}
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
     restart: always
-    hostname: my-mysql
     environment:
-      TZ: ${TZ}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      BIND-ADDRESS: ${MYSQL_ADDRESS}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: ${TIME_ZONE}
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-    env_file:
-      - .env
     ports:
       - 13306:3306
     volumes:
