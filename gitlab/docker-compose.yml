@@ -7,7 +7,7 @@ services:
     restart: always
     ports:
       - "8888:80"
-      - "22:22"
+      - "1022:22"
     volumes:
       - "./config:/etc/gitlab"
       - "./logs:/var/log/gitlab"
