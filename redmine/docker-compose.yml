@@ -23,7 +23,7 @@ services:
     depends_on:
       - postgres
     networks:
-      - my_network
+      - redmine_network
   postgres:
     container_name: ${POSTGRES_CONTAINER_NAME}
     build:
@@ -43,7 +43,7 @@ services:
       POSTGRES_DATABASE: ${POSTGRES_DB}
       TZ: ${TIME_ZONE}
     networks:
-      - my_network
+      - redmine_network
   mailhog:
     container_name: ${MAIL_CONTAINER_NAME}
     build:
@@ -55,6 +55,6 @@ services:
     depends_on:
       - redmine
     networks:
-      - my_network
+      - redmine_network
 networks:
-  my_network:
+  redmine_network:
