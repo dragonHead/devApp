@@ -1,3 +1,4 @@
 FROM mailhog/mailhog
 
-LABEL redmine.dev.version="1.0.0"
+LABEL vuelearn.version="1.0"
+LABEL vuelearn.description="redmine mail sample"
