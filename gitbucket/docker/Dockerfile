@@ -2,7 +2,7 @@
 FROM openjdk:8-jre
 
 LABEL vuelearn.version="1.0"
-LABEL vuelearn.description="redmine sample"
+LABEL vuelearn.description="gitbucket sample"
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends locales locales-all \

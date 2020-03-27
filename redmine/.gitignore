@@ -4,3 +4,5 @@ redmine/plugins/
 redmine/public/
 
 postgres/data/
+
+mail/data/

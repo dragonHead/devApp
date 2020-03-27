@@ -14,8 +14,9 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: "1"
     ports:
       - 13306:3306
+    tty: true
     volumes:
       - ./data:/var/lib/mysql
       - ./conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
       - ./sqls:/docker-entrypoint-initdb.d
-    tty: true
+

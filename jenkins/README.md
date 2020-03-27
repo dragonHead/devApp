@@ -1,15 +1,1 @@
-- docker-compose.ymlにmasterのみを記述し、buildを実行  
-- masterを起動し、初期設定  
-- masterに接続してSSH Keyを生成する  
-- docker container exec -it jenkins_master ssh-keygen -t rsa -C ""  
-- docker-compose.ymlにslaveコンテナを記述  
-- jenkinsにログインし、[jenkins管理]->[ノードの管理]->[新規ノード作成]  
-- ノード名[slave01]  
-- リモートFSルートは[/home/jenkins]  
-- 起動方法にはSSH経由でUnixマシンのスレーブエージェントを起動を選択  
-- ホスト名はjenkins_slave01  
-- [Host Key Verification Strategy]にはNon verifying Verification Strategyを設定  
-- 認証情報は「追加」プルダウンからjenkinsを選択  
-- 認証情報の追加における[種類]はSSHユーザー名(jenkins)と秘密鍵を指定する。  
-- 秘密鍵はjenkinsマスター上の~/.sshから選択  
-- 再び新規ノード設定画面に戻るので、「認証情報」にjenkinsを設定し、保存  
+# jenkins sample

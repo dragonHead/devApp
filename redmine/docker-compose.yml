@@ -54,6 +54,8 @@ services:
       - "11025:1025"
     depends_on:
       - redmine
+    volumes:
+      - "./mail/data:/tmp"
     networks:
       - redmine_network
 networks:
